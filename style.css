@@ -79,9 +79,11 @@ form{
 
 #ingredient{
   background-color:antiquewhite;
-  width:30%;
+  width:100%;
+  min-width: 100px;
+  max-width: 200px;
   height: auto;
-  max-height: 550px;
+  max-height: 600px;
   border-radius: 20px;
   float: right;
   margin-top: 20px;
@@ -97,6 +99,7 @@ form{
   border-radius: 8px;
   margin-left: 20px;
   margin-top: 600px;
+  margin-right: 20px;
   border: 2px solid tan;
 }
 
