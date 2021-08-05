@@ -2,6 +2,12 @@
     box-sizing: border-box;
 }
 
+#logo {
+  color: tan;
+  font-size: 25pt;
+  font-family: sans-serif;
+  text-shadow: 1px 2px black;
+}
 #save{
   background-color:burlywood;
   border: 2px solid tan;
@@ -26,7 +32,7 @@
 
 #square{
   height: 3px;
-  width: 10%;
+  width: 30%;
   margin-left: 15px;
   background-color: burlywood;
 }
@@ -41,14 +47,14 @@ footer{
 }
 #square1{
   height: 3px;
-  width: 15%;
+  width: 35%;
   margin-left: 15px;
   background-color: burlywood;
 }
 
 #square2{
   height: 3px;
-  width: 20%;
+  width: 40%;
   margin-left: 15px;
   background-color: burlywood;
 }
@@ -98,22 +104,13 @@ h3{
     font-family: "Times New Roman", Times, serif;
     color: saddlebrown;
 }
-#logo{
-  height:166px;
-  width:587px;
-  background-image:url("logo.png");
-  background-repeat:no-repeat;
-  position: absolute;
-  float: left;
-  top: 4px;
-  overflow: auto;
-  background-size:150px 42px;
-}
 
 #spaghettii{
   position: absolute;
-  margin-top: 120px;
-  margin-left: 570px;
+  width: 60%;
+  height: auto;
+  right: 15px;
+  top: 250px;
   border: none;
   outline: none;
   padding: 190px 380px;
@@ -124,8 +121,10 @@ h3{
 
 #browniess{
   position: absolute;
-  margin-top: 120px;
-  margin-left: 570px;
+  width: 60%;
+  height: auto;
+  right: 15px;
+  top: 250px;
   border: none;
   outline: none;
   padding: 190px 380px;
@@ -136,8 +135,10 @@ h3{
 
 #friedricee{
   position: absolute;
-  margin-top: 120px;
-  margin-left: 570px;
+  width: 60%;
+  height: auto;
+  right: 15px;
+  top: 250px;
   border: none;
   outline: none;
   padding: 190px 380px;
@@ -182,52 +183,28 @@ li a.activee{
 }
 
 #search{
-  width: 150%;
+  width: 60%;
   margin-top: 50px;
-  margin-left: 528px;
+  margin-left: 15px;
 }
 
-#spaghetti {
-  position: absolute;
-  margin-top: 10px;
-  margin-left: 20px;
-  border: none;
-  outline: none;
-  padding: 100px 200px;
-  background-image: url("spaghetti.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.18);
+.row {
+  display: flex;
 }
 
-#brownies {
-  position: absolute;
-  margin-top: 10px;
-  margin-left: 475px;
-  border: none;
-  outline: none;
-  padding: 100px 200px;
-  background-image: url("brownies.jpeg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.18);
+/* Create three equal columns that sits next to each other */
+.column {
+  flex: 33.33%;
+  padding: 10px;
 }
 
-#friedrice {
-  position: absolute;
-  margin-top: 10px;
-  margin-left: 930px;
-  border: none;
-  outline: none;
-  padding: 100px 200px;
-  background-image: url("friedrice.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.18);
-}
+img {
+  box-shadow: 0px 2px 6px black;
+}   
+
 
 input[type=text] {
-  width: 15%;
+  width: 50%;
   padding: 5px 8px;
   margin: 8px 0;
   box-sizing: border-box;
@@ -242,7 +219,7 @@ input[type=text]:focus {
 }
 
 input[type=email] {
-  width: 25%;
+  width: 80%;
   padding: 5px 8px;
   margin: 8px 0;
   box-sizing: border-box;
@@ -257,7 +234,7 @@ input[type=email]:focus {
 }
 
 input[type=password] {
-  width: 15%;
+  width: 50%;
   padding: 5px 8px;
   margin: 8px 0;
   box-sizing: border-box;
@@ -277,7 +254,8 @@ input[type=submit]{
   color: white;
   padding: 6px 9px;
   text-decoration: none;
-  margin-left: 325px;
+  float: right;
+  margin-right: 15px;
 }
 
 .container {
