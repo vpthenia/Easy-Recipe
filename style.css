@@ -79,26 +79,25 @@ form{
 
 #ingredient{
   background-color:antiquewhite;
-  width:100%;
-  min-width: 100px;
-  max-width: 200px;
+  width:90%;
   height: auto;
-  max-height: 600px;
   border-radius: 20px;
-  float: right;
-  margin-top: 20px;
+  float: left;
+  margin-top: 500px;
   margin-right: 20px;
+  margin-left: 20px;
   border: 2px solid tan;
   text-align: left;
 }
 
 #step{
+  position: relative;
   background-color:blanchedalmond;
   max-width:97%;
   height: 50px;
   border-radius: 8px;
   margin-left: 20px;
-  margin-top: 600px;
+  margin-top: 1025px;
   margin-right: 20px;
   border: 2px solid tan;
 }
@@ -115,8 +114,8 @@ h3{
 }
 
 #recipeimg {
-  position: relative;
-  margin-top: 100px;
+  position: absolute;
+  margin-top: 90px;
   margin-left: 20px;
 }
 
@@ -168,7 +167,7 @@ li a.activee{
 /* Create three equal columns that sits next to each other */
 .column {
   flex: 33.33%;
-  padding: 10px;
+  padding: 6px;
 }
 
 img {
