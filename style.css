@@ -126,12 +126,13 @@ form{
 #ingredient{
   position: relative;
   background-color:antiquewhite;
-  width:50%;
+  width:85%;
   height:auto;
   border-radius: 20px;
   float: left;
   margin-top: 580px;
   margin-left: 20px;
+  margin-right: 20px;
   border: 2px solid tan;
   text-align: left;
 }
@@ -144,7 +145,7 @@ form{
   height: 50px;
   border-radius: 8px;
   margin-left: 20px;
-  margin-top: 1350px;
+  margin-top: 1850px;
   margin-right: 20px;
   border: 2px solid tan;
 }
@@ -156,7 +157,7 @@ form{
   height: 50px;
   border-radius: 8px;
   margin-left: 20px;
-  margin-top: 1650px;
+  margin-top: 1850px;
   margin-right: 20px;
   border: 2px solid tan;
 }
@@ -168,7 +169,7 @@ form{
   height: 50px;
   border-radius: 8px;
   margin-left: 20px;
-  margin-top: 1750px;
+  margin-top: 1850px;
   margin-right: 20px;
   border: 2px solid tan;
 }
@@ -221,7 +222,7 @@ li{
 li.b{
     margin-bottom: 12px;
     margin-left: 15px;
-    padding-right: 275px;
+    padding-right: 600px;
     padding-top: 10px;
     padding-left: 2px;
 }
@@ -237,7 +238,7 @@ li.c{
 li.d{
     margin-bottom: 12px;
     margin-left: 10px;
-    padding-right: 275px;
+    padding-right: 500px;
     padding-top: 10px;
     padding-left: 2px;
 }
