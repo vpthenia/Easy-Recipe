@@ -2,6 +2,36 @@
     box-sizing: border-box;
 }
 
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .5s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
+}
+#post{
+    margin-top: 200px;
+    color: red;
+    margin-left: 20px;
+    padding-bottom: 10px;
+}
+#press{
+    background-color: blanchedalmond;
+    border: 2px solid tan;
+    color: black;
+    padding: 6px 9px;
+    border-radius: 6px;
+}
+#btn{
+    background-color:burlywood;
+  border: 2px solid tan;
+    padding: 6px 9px;
+    color: white;
+}
+#multimsg {
+    float:left;
+    margin-left: 20px;
+}
+
 #logo {
   color: tan;
   font-size: 25pt;
@@ -16,6 +46,22 @@
   text-decoration: none;
   margin-right: 20px;
   float: right;
+}
+
+#comment{
+    max-width: 90%;
+    max-height: 60px;
+    box-sizing: border-box;
+  border: 2px solid burlywood;
+  -webkit-transition: 0.75s;
+  transition: 0.75s;
+  outline: none;
+}
+
+#used{
+  margin-right: -125px;
+  margin-top: 30px;
+  float: right; 
 }
 
 #saveempty{
@@ -78,17 +124,18 @@ form{
 }
 
 #ingredient{
+  position: relative;
   background-color:antiquewhite;
-  width:90%;
-  height: auto;
+  width:50%;
+  height:auto;
   border-radius: 20px;
   float: left;
-  margin-top: 500px;
-  margin-right: 20px;
+  margin-top: 580px;
   margin-left: 20px;
   border: 2px solid tan;
   text-align: left;
 }
+
 
 #step{
   position: relative;
@@ -97,7 +144,31 @@ form{
   height: 50px;
   border-radius: 8px;
   margin-left: 20px;
-  margin-top: 1025px;
+  margin-top: 1350px;
+  margin-right: 20px;
+  border: 2px solid tan;
+}
+
+#stepp{
+  position: relative;
+  background-color:blanchedalmond;
+  max-width:97%;
+  height: 50px;
+  border-radius: 8px;
+  margin-left: 20px;
+  margin-top: 1650px;
+  margin-right: 20px;
+  border: 2px solid tan;
+}
+
+#steppp{
+  position: relative;
+  background-color:blanchedalmond;
+  max-width:97%;
+  height: 50px;
+  border-radius: 8px;
+  margin-left: 20px;
+  margin-top: 1750px;
   margin-right: 20px;
   border: 2px solid tan;
 }
@@ -106,6 +177,15 @@ h1{
     font-family: "Times New Roman", Times, serif;
     color: saddlebrown;
     text-align: center;
+}
+
+h2{
+    font-family: "Times New Roman", Times, serif;
+    color: saddlebrown;
+    text-align: left;
+    margin-top: 500px;
+    margin-left: 20px;
+    padding-top: 10px;
 }
 
 h3{
@@ -133,6 +213,7 @@ ul.b{
   list-style-type: circle;
 }
 
+
 li{
     float: left;
 }
@@ -140,6 +221,25 @@ li{
 li.b{
     margin-bottom: 12px;
     margin-left: 15px;
+    padding-right: 275px;
+    padding-top: 10px;
+    padding-left: 2px;
+}
+
+li.c{
+    margin-bottom: 12px;
+    margin-left: 10px;
+    padding-right: 15px;
+    padding-top: 10px;
+    padding-left: 2px;
+}
+
+li.d{
+    margin-bottom: 12px;
+    margin-left: 10px;
+    padding-right: 275px;
+    padding-top: 10px;
+    padding-left: 2px;
 }
 
 li a{
@@ -177,6 +277,17 @@ img {
 
 input[type=text] {
   width: 50%;
+  padding: 5px 8px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 2px solid burlywood;
+  -webkit-transition: 0.75s;
+  transition: 0.75s;
+  outline: none;
+}
+
+#searchh {
+    width: 70%;
   padding: 5px 8px;
   margin: 8px 0;
   box-sizing: border-box;
@@ -240,8 +351,8 @@ input[type=submit]{
   color: black;
   border: 2px solid tan;
   width: 100%;
-  max-width:200px;
-  line-height: 200px;
+  max-width:150px;
+  line-height: 150px;
   text-align: center;
   margin-left: 15px;
   margin-bottom: 15px;
