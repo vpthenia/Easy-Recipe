@@ -1,49 +1,117 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="style.css">
 <title>Brownies</title>
- <ul class="a">
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+</head>
+<body id= "mainbg">
+    <ul class="a">
         <li><a href="index.html">Home</a></li>
         <li><a href="saved-recipe.html">Saved</a></li>
         <li style= "float:right"><a href="contact.html">Contact</a></li>
         <li style= "float:right"><a href="signin.html">Sign In</a></li>
     </ul>
-</head>
-<body id= "mainbg">
     <h1 id = "logo">EASY RECIPE</h1>
     <br>
     <h1> Brownies</h1>
     <a id= "back" href="index.html">back</a>
     <a id ="save" href="saved-recipe.html">save</a>
-    <div id = "recipeimg"><img src="brownies.jpeg" alt="Brownies" width="60%"></div>
+    <br><div id="used">
+  <button-counter id= "press"></button-counter>
+</div>
+    <div id = "recipeimg"><img src="brownies.jpeg" alt="Brownies" width="75%"></div>
     <br>
     <br>
     <div id="ingredient">
-    <br>
-        
+    <br>      
     <h3 id = "textt">Ingredients</h3>
-    <p id="textt">1/2 cup butter</p>
-    <p id="textt">1 cup white sugar</p>
-    <p id="textt">2 eggs</p>
-    <p id="textt">1 teaspoon vanilla extract</p>
-    <p id="textt">1/2 cup unsweetened cocoa powder</p>
-    <p id="textt">1/2 cup all-purpose flour</p>
-    <p id="textt">1/4 teaspoon salt</p>
-    <p id="textt">1/4 teaspoon baking powder</p>
+    <ol>
+        <li class="b" v-for="sth in todos"
+        >{{sth.text}}
+        </li>
+        </ol>
     <br>
     </div>
     <br>
     <div id="step"> 
     <h3 id="textt">Steps</h3>
-    <ul class="b">
-    <li class="b">Preheat oven to 350 degrees F (175 degrees C). Grease and flour an 8-inch square pan.</li>
-    <li class="b">In a large saucepan, melt 1/2 cup butter. Remove from heat, and stir in sugar, eggs, and 1 teaspoon vanilla. Beat in 1/3 cup cocoa, 1/2 cup flour, salt, and baking powder. Spread batter into prepared pan.</li>
-    <li class="b">Bake in preheated oven for 25 to 30 minutes. Do not overcook.</li>
-    <li class="b">To Make Frosting: Combine 3 tablespoons softened butter, 3 tablespoons cocoa, honey, 1 teaspoon vanilla extract, and 1 cup confectioners' sugar. Stir until smooth. Frost brownies while they are still warm.</li>
-    </ul>  
+   <ol>
+        <li class="c" v-for="sth in todoos"
+        >{{sth.text}}</li>
+        </ol>
       </div>
-      
+<h2>Comment</h2>
+    <br><div id="multimsg">
+<textarea id ="comment" v-model="message" placeholder="Enter comment here.."></textarea>
+<p style="white-space: pre-line;">Your comment: <br>{{ message }}</p>
+    </div>
+    <div id="post">
+  <button id = "btn" v-on:click="show = !show">
+    Post
+  </button>
+  <transition name="fade">
+    <p v-if="show">Sign in to post comment.</p>
+  </transition>
+</div>
+<script>
+    Vue.component('button-counter', {
+  data: function () {
+    return {
+      count: 0
+    }
+  },
+  template: '<button v-on:click="count++">You have used this recipe {{ count }} times.</button>'
+})
+    new Vue({ el: '#used' })
+    
+     new Vue({
+  el: '#post',
+  data: {
+    show: true
+  }
+})
+       var multiline = new Vue({
+  el: '#multimsg',
+  data: {
+    message:""
+  }
+})
+    var ingredient = new Vue({
+        el:"#ingredient",
+        data: {
+            todos:[
+                {key:1, text:"1/2 cup butter"},
+                {key:2, text:"1 cup white sugar"},
+                {key:3, text:"2 eggs"},
+                {key:4, text:"1 teaspoon vanilla extract"},
+                {key:5, text:"1/2 cup unsweetened cocoa powder"},
+                {key:6, text:"1/2 cup all-purpose flour"},
+                {key:7, text:"1/4 teaspoon salt"},
+                {key:8, text:"1/4 teaspoon baking powder"},
+                
+            ]
+        }
+        
+        
+    })
+    
+    var step = new Vue({
+        el:"#step",
+        data: {
+            todoos:[
+                {key:1, text:"Preheat oven to 350 degrees F (175 degrees C). Grease and flour an 8-inch square pan."},
+                {key:2, text:"In a large saucepan, melt 1/2 cup butter. Remove from heat, and stir in sugar, eggs, and 1 teaspoon vanilla. Beat in 1/3 cup cocoa, 1/2 cup flour, salt, and baking powder. Spread batter into prepared pan."},
+                {key:3, text:"Bake in preheated oven for 25 to 30 minutes. Do not overcook."},
+                {key:4, text:"To Make Frosting: Combine 3 tablespoons softened butter, 3 tablespoons cocoa, honey, 1 teaspoon vanilla extract, and 1 cup confectioners' sugar. Stir until smooth. Frost brownies while they are still warm."},
+                
+            ]
+        }
+        
+        
+    })
+    </script>     
 </body>
 </html>
