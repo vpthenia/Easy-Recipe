@@ -1,20 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="style.css">
 <title>Easy Recipe</title>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+</head>
+<body id= "mainbg">
 <ul class="a">
                 <li><a class="activee" href="index.html">Home</a></li>
         <li><a href="saved-recipe.html">Saved</a></li>
         <li style= "float:right"><a href="contact.html">Contact</a></li>
         <li style= "float:right"><a href="signin.html">Sign In</a></li>
     </ul>
-</head>
-<body id= "mainbg">
 <h1 id = "logo">EASY RECIPE</h1>
 <br>
-<h1>Most Viewed</h1>
+<h1>Most viewed</h1>
 <br>
 <div class="row">
   <div class="column">
@@ -30,8 +32,11 @@
     <br>
     <br>
     <br>
-    <br><h1>Find Recipe</h1>
-<div id ="search"><input type="text" placeholder="Search.."></div>
+    <br><h1>Find recipe</h1>
+<div id="search">
+  <p>{{ message }}</p>
+  <input id= "searchh" v-model="message" placeholder="Search..">
+</div>
 <br>
 <br>
 <div id="myBtnContainer">
@@ -56,7 +61,15 @@
   <div class="filterDiv italian">Spaghetti bolognese</div>
   <div class="filterDiv italian">Lasagna</div>
 </div>
+    
 <script>
+var app6 = new Vue({
+  el: '#search',
+  data: {
+    message:""
+  }
+})
+
 filterSelection("all")
 function filterSelection(c) {
   var x, i;
