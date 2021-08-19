@@ -27,7 +27,7 @@
     <br>
      <div id="ingredient">
     <br>      
-    <h3 id = "textt">Ingredients</h3>
+    <h3 id="textt" v-bind:title="message">{{message}}</h3>
     <ol>
         <li class="d" v-for="sth in todos"
         >{{sth.text}}</li>
@@ -36,7 +36,7 @@
     </div>
     <br>
     <div id="stepp"> 
-    <h3 id="textt">Steps</h3>
+    <h3 id="textt" v-bind:title="message">{{message}}</h3>
    <ol>
         <li class="c" v-for="sth in todoos"
         >{{sth.text}}</li>
@@ -81,6 +81,7 @@
     var ingredient = new Vue({
         el:"#ingredient",
         data: {
+            message: "Ingredients",
             todos:[
                 {key:1, text:"Brown rice. White rice will work great here too"},
                 {key:2, text:"Small pieces dice chicken breast about 1/2 – 3/4-inch"},
@@ -101,6 +102,7 @@
     var step = new Vue({
         el:"#stepp",
         data: {
+            message: "Steps",
             todoos:[
                 {key:1, text:"In a large non-stick wok or skillet, heat 1 1/2 tsp sesame oil and 1 1/2 tsp of the canola oil over medium-high heat."},
                 {key:2, text:"Add chicken pieces, season lightly with salt and pepper and saute until cooked through, about 5 – 6 minutes."},
