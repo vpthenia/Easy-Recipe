@@ -1,20 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="style.css">
 <title>Sign up</title>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
 </head>
-    <ul class="a">
+<body id= "mainbg">
+ <ul class="a">
         <li><a href="index.html">Home</a></li>
         <li><a href="saved-recipe.html">Saved</a></li>
         <li style= "float:right"><a href="contact.html">Contact</a></li>
         <li style= "float:right"><a href="signin.html">Sign In</a></li>
     </ul>
-<body id= "mainbg">
-<h1 id = "logo">EASY RECIPE</h1>
+ <div id="heading"><h1 id = "logo" v-bind:title="title">{{title}}</h1>
 <br>  
-<h1>Create account</h1>
+<h1 v-bind:title="title2">{{title2}}</h1></div>
 <br>
 <form action="/action_page.php"
 method="post">
@@ -34,6 +36,17 @@ method="post">
 <br><br><input type="submit" value="submit">
     </form>
 <p id="textt">Already have an account? <a href="signin.html">Sign in</a></p>
-     
+
+    <script>
+        
+     new Vue({ el: '#heading',
+        data:{
+            title: "EASY RECIPE",
+            title2: "Create account",
+        }    
+            
+            })
+    
+    </script>
 </body>
 </html>
