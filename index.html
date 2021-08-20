@@ -14,9 +14,9 @@
         <li style= "float:right"><a href="contact.html">Contact</a></li>
         <li style= "float:right"><a href="signin.html">Sign In</a></li>
     </ul>
-<h1 id = "logo">EASY RECIPE</h1>
+<div id="heading"><h1 id = "logo" v-bind:title="title">{{title}}</h1>
 <br>
-<h1>Most viewed</h1>
+<h1 v-bind:title2="title">{{title2}}</h1>
 <br>
 <div class="row">
   <div class="column">
@@ -32,7 +32,7 @@
     <br>
     <br>
     <br>
-    <br><h1>Find recipe</h1>
+    <br><h1 v-bind:title="title3">{{title3}}</h1></div>
 <div id="search">
   <p>{{ message }}</p>
   <input id= "searchh" v-model="message" placeholder="Search..">
@@ -63,7 +63,17 @@
 </div>
     
 <script>
-var app6 = new Vue({
+    
+ new Vue({ el: '#heading',
+        data:{
+            title: "EASY RECIPE",
+            title2: "Most viewed",
+            title3: "Find recipe",
+        }    
+            
+            })
+ 
+new Vue({
   el: '#search',
   data: {
     message:""
