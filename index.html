@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css"> 
 <title>Easy Recipe</title>
 <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
 </head>
 <body id= "mainbg">
 <ul class="a">
                 <li><a class="activee" href="index.html">Home</a></li>
-        <li><a href="saved-recipe.html">Saved</a></li>
+        <li><a href="saved-recipe.html">Saved</a></li>                      
         <li style= "float:right"><a href="contact.html">Contact</a></li>
         <li style= "float:right"><a href="signin.html">Sign In</a></li>
     </ul>
@@ -18,12 +18,12 @@
 <br>
 <h1 v-bind:title2="title">{{title2}}</h1>
 <br>
-<div class="row">
+<div class="row"> 
   <div class="column">
     <a href="spaghetti-bolognese.html"><img src="spaghetti.jpg" alt="Spaghetti Bolognese" style="width:100%"></a>
   </div>
   <div class="column">
-      <a href="brownies.html"><img src="brownies.jpeg" alt="Brownies" style="width:100%"></a>
+      <a href="brownies.html"><img src="brownies.jpeg" alt="Brownies" style="width:100%"></a>  
   </div>
   <div class="column">
       <a href="chicken-fried-rice.html"><img src="friedrice.jpg" alt="Chicken Fried Rice" style="width:100%"></a>
@@ -35,11 +35,11 @@
     <br><h1 v-bind:title="title3">{{title3}}</h1></div>
 <div id="search">
   <p>{{ message }}</p>
-  <input id= "searchh" v-model="message" placeholder="Search..">
-</div>
+  <input id= "searchh" v-model="message" placeholder="Search.."> 
+</div>  
 <br>
 <br>
-<div id="myBtnContainer">
+<div id="myBtnContainer"> 
   <button class="btn active" onclick="filterSelection('all')"> Show all</button>
   <button class="btn" onclick="filterSelection('japanese')"> Japanese</button>
   <button class="btn" onclick="filterSelection('american')"> American</button>
@@ -47,7 +47,7 @@
   <button class="btn" onclick="filterSelection('italian')"> Italian</button>
 </div>
 
-<!-- The filterable elements. Note that some have multiple class names (this can be used if they belong to multiple categories) -->
+
 <div class="container">
   <div class="filterDiv japanese">Champon</div>
   <div class="filterDiv japanese">Gyoza</div>
@@ -74,18 +74,18 @@
             })
  
 new Vue({
-  el: '#search',
+  el: '#search', 
   data: {
     message:""
   }
 })
 
-filterSelection("all")
+filterSelection("all") 
 function filterSelection(c) {
   var x, i;
   x = document.getElementsByClassName("filterDiv");
   if (c == "all") c = "";
-  // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
+  
   for (i = 0; i < x.length; i++) {
     w3RemoveClass(x[i], "show");
     if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
